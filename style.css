@@ -1,0 +1,179 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    overflow: hidden;
+    box-sizing: border-box;
+}
+.bodyMusic{
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+}
+.left{
+    width: 25vw;
+    height: 100vh;
+    background-color: rgb(100, 100, 100);
+    overflow-y: scroll;
+}
+.right {
+    width: 100%;
+    height: 100vh;
+    background-color: rgb(235, 100, 10);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.icons {
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+    max-width: 100%; /* Adjust max-width as needed */
+}
+
+.icons i {
+    padding: 2vw;
+    font-size: 1.5rem; /* 1 rem = 16px */
+}
+
+.player {
+    height: 80vh;
+    width: 90%;
+    max-width: 400px; /* Adjust max-width as needed */
+    background-color: rgb(100, 100, 100);
+    border-radius: 5%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.player .heading h5 {
+    color: rgb(200, 200, 200);
+    font-size: 1.5rem;
+    text-align: center;
+    padding: 2vw;
+}
+
+.player .image {
+    height: 200px;
+    width: 200px;
+    border-radius: 50%;
+    margin: 1vw auto;
+    background-image: url('./images/Hoor-Hindi-Medium-500-500.jpg');
+    background-size: cover;
+}
+
+.songtitle {
+    color: rgb(200, 200, 200);
+    font-size: 1.2rem;
+    text-shadow: 2px 2px rgb(0, 0, 0);
+    text-align: center;
+    padding: .5vw;
+}
+
+.player .title p {
+    color: rgb(200, 200, 200);
+    font-size: 1rem;
+    text-shadow: 2px 2px rgb(0, 0, 0);
+    text-align: center;
+}
+
+input[type="range"] {
+    -webkit-appearance: none;
+    width: 80%;
+    height: 6px;
+    border-radius: 5px;
+    background-color: rgb(0, 0, 0);
+    margin: 2vw auto;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: rgb(235, 100, 10);
+}
+
+.player .buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 1vw auto;
+}
+
+.player .buttons .buttonDiv {
+    margin: 1vw;
+}
+
+.orange {
+    transform: scale(1.5);
+    color: rgb(235, 100, 10);
+}
+
+.left::-webkit-scrollbar {
+    width: 10px;
+}
+.left::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+   
+.left::-webkit-scrollbar-thumb {
+background-color: black;
+border-radius: 5px;
+outline: 1px solid slategrey;
+}
+
+@media screen and (max-width: 768px) {
+    .icons {
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    .icons i {
+        padding: 1vw;
+        font-size: 1.2rem;
+    }
+
+    .player {
+        height: auto;
+    }
+
+    .player .heading h5 {
+        font-size: 1.2rem;
+    }
+
+    .player .image {
+        height: 150px;
+        width: 150px;
+    }
+
+    .songtitle {
+        font-size: 1rem;
+    }
+
+    .player .title p {
+        font-size: 0.8rem;
+    }
+
+    input[type="range"] {
+        width: 90%;
+        margin: 2vw auto;
+    }
+
+    .player .buttons {
+        margin: 2vw auto;
+    }
+
+    .player .buttons .buttonDiv {
+        margin: 1vw;
+    }
+
+    .orange {
+        transform: scale(1.2);
+    }
+}
